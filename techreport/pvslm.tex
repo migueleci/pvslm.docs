@@ -1,9 +1,9 @@
 \section{PVSLM}
 \label{sec:pvslm}
 
-This section describe the design and architecture of PVS Library Manager.
+This section describes the design and architecture of PVS Library Manager.
 
-Before to describe and analyze the tool it is necessary to define the structure used. The smallest part are the theories, which are organized in packages. Those packages are main element for the tool. Finally there are sets of packages, called libraries. Furthermore, it is necessary to specify the connections or relations within a library, these are the dependencies between its packages. So every package must have a dependencies list defined as the union of the dependencies of its theories.
+Before to describe and analyze the tool, is necessary to define the structure used. The smallest part are the theories, which are organized in packages. Those packages are the main element for the tool. Finally there are sets of packages, called libraries. Furthermore, it is necessary to specify the connections or relations within a library, these are the dependencies between its packages. So every package must have a dependencies list defined as the union of the dependencies of its theories.
 
 PVSLM has been developed to manage the installation and update of packages from a PVS library. It has been divided into two sections, the first one manage the source and repository for each library, and the second one manage the packages.
 
@@ -35,7 +35,7 @@ As the tool has been developed for the PVS NASA library (nasalib), this one is c
   \label{tab:comm}
 \end{table}
 
-PVSLM works locally, but it needs Internet connection for its installation and the communication with the git repositories. Basically it is downloaded and then configured, once it is installed there are several commands that needs the to connect to the git repository either to clone or pull it. For example, when a package is going to be installed, it is updated along with all its dependencies. The figure \ref{fig:archi} shows how the tool works.
+PVSLM works locally, but it needs Internet connection for its installation and the communication with the git repositories. Basically it is downloaded and then configured, once it is installed there are several commands that needs to connect to the git repository either to clone or pull it. For example, when a package is going to be installed, it is updated along with all its dependencies. The figure \ref{fig:archi} shows how the tool works.
 
 \begin{figure}[h!]
   \centering

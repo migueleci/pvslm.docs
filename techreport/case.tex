@@ -1,5 +1,41 @@
 \section{Case study: Nasalib configuration and installation}
 \label{ssec:nasalib}
 
-2-3 pages
+This section shows an example step by step of the configuration and installation of a library in PVSLM. Specifically, NASA PVS Library (nasalib) is going to be used in the case study.
 
+\begin{enumerate}
+\item 
+  The first step is the creation of the configuration file for the library. To reach it, it is necessary to assign a codename to the library that will be used afterward. Along with the codename, the description of the library and its URL are necessary. The URL belongs to an active git repository. The next command will create the file with all the attributes into it.\\
+
+  \texttt {\$ pvslm.py src -a nasalib `description' url\\}
+
+\item
+  Then it is necessary to create the repository for the library. From the already created file, the URL is used to create a clone of the git repository. Besides, within the PVS path is created a folder with the codename for the library.\\
+
+  \texttt {\$ pvslm.py src -c nasalib\\}
+
+\item 
+  The library is already configured with the commands described above. Now it can be used; namely, it is possible to manage all its packages. The first step is looking up the available packages and its dependencies. There are two commands to accomplish it, described below. The first one will list all the available packages within the library in lexicographic order; and the second one will list all the dependencies of the package, also in lexicographic order. Finally there is a third command that list the configured and available libraries.
+  
+  \texttt {\\\$ pvslm.py pkg -l nasalib}
+  
+  \texttt {\\\$ pvslm.py pkg -l nasalib@complex}
+  
+  \texttt {\\\$ pvslm.py pkg -l\\}
+
+\item
+  When installing a package there are two activities executed at the same time. When the command is executed a list with all the dependencies of the package will be shown, along with a confirmation message. Once the user accept to install the package with its dependencies, all of them are going to be updated before copying to the PVS path. As mentioned before, the installation is a copy of the packages from its repository (clone) to the PVS path.
+  
+  \texttt {\\\$ pvslm.py src -u nasalib\\}
+
+\item
+  To update a library without executing any extra activity, the following command will proceed a pull from the git repository specified in the configuration file.  
+
+  \texttt {\\\$ pvslm.py pkg -i nasalib@complex\\}
+
+\item 
+  Finally, to delete a package it is necessary to keep in mind the dependencies, i.e. if a package its deleted, it is necessary to delete every package that uses or depends on it. As the installation command, before the deletion is process a list with all the dependencies is going to be displayed along with a confirmation message. And example of the command is showed below.   
+
+  \texttt {\\\$ pvslm.py pkg -d nasalib@ints\\}
+
+\end{enumerate}
