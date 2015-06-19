@@ -21,11 +21,12 @@ package. Each folder contains the corresponding \cde{pvs} and
 \cde{prf} files for its theories, and the folder \cde{pvsbin}, a
 special folder with the package's metadata described in a file named
 \cde{top.dep}. Figure~\ref{fig.package} depicts the structure of
-package \cde{analysis} from the NASA PVS Library~\cite{nasalib}.
+package \cde{analysis} from the NASA PVS Library~\cite{nasalib}
+(NASALib).
 
 \begin{figure}
   \centering
-  \includegraphics[width=13cm]{images/package.png}
+  \includegraphics[width=11cm]{images/package.png}
   \caption{The structure of a package \cde{analysis}.}
   \label{fig.package}
 \end{figure}
@@ -49,39 +50,42 @@ list of theory dependencies. In the case such a theory depends on a
 theory from other package, the name of that dependency must be
 qualified by the name of the corresponding package.
 
-
 \begin{table}
   \centering
   \begin{tabular}{r c p{8cm}}
-    \hline
+    \hline \\
     $\nterm{\cde{metadata}}$ & ::= & $\nterm{\cde{header}} \; \nterm{\cde{body}}$ \\
     $\nterm{\cde{header}}$ & ::= & `/' $\nterm{\cde{theorylist}}$ \\
     $\nterm{\cde{theorylist}}$ & ::= & $\nterm{\cde{theory}} \mid \nterm{\cde{theory}}$ `,' $\nterm{\cde{theorylist}}$ \\
     $\nterm{\cde{body}}$ & ::= & $(\nterm{\cde{packagedep}} \mid \nterm{\cde{theorydep}})*$ \\
     $\nterm{\cde{packagedep}}$ & ::= & $\nterm{\cde{package}}$ `/' $\nterm{\cde{theorylist}}$ \\
-    $\nterm{\cde{theorydep}}$ & ::= & $\nterm{\cde{theory}}$ `:' $\nterm{\cde{qualtheorylist}}$ \\
+    $\nterm{\cde{theorydep}}$ & ::= & $\nterm{\cde{theory}}$ `:' $\nterm{\cde{qualtheorylist}} ?$ \\
     $\nterm{\cde{qualtheorylist}}$ & ::= & $\nterm{\cde{qualtheory}} \mid \nterm{\cde{qualtheory}}$ `,' $\nterm{\cde{qualtheorylist}}$ \\
     $\nterm{\cde{qualtheory}}$ & ::= & $(\nterm{\cde{package}}\; \text{`@'})?$ $\nterm{\cde{theory}}$ \\
+    \\
     \hline
   \end{tabular}
   \caption{Syntax of the \cde{top.dep} metadata file.}
   \label{tab.bnf}
 \end{table}
 
-\begin{table}
+Figure~\ref{fig.top} presents an overview of the configuration file
+for package \cde{trig} in NASALib. According to the header
+description, package \cde{trig} defines theories \cde{top},
+\cde{trig\_doc}, \cde{trig}, \cde{trig\_values}, etc. It contains $5$
+package dependencies and $7$ theory dependencies. For instance,
+package \cde{trig} depends on theory \cde{for\_iterate} from package
+\cde{structures}, and on theories \cde{finite\_sets\_minmax} and
+\cde{finite\_sets\_inductions} from package \cde{finite\_sets}. On the
+other hand, theory \cde{trig\_doc} has no dependencies, while theory
+\cde{trig} depends on packages \cde{trig\_basic}, \cde{sqrt},
+\cde{trig\_values}, and \cde{trig\_ineq}. In the case of theory
+\cde{sqrt}, it is explicitly stated that such a theory comes
+from package \cde{reals}.
+
+\begin{figure}
   \centering
-    \begin{tabular}{ l l p{8cm}}
-       \hline
-      $<$part\_one$>$ & ::= & ``/'' $<$theories\_list$>$\\
-      $<$theories\_list$>$ & ::= &  $<$theory$>$ $|$ $<$theory$>$ ``,'' $<$theories\_list$>$\\
-      \\
-      $<$part\_two$>$ & ::= &  $<$package\_dep$>$ ``/'' $<$theories\_dep$>$\\
-      $<$theories\_dep$>$ & ::= &  $<$theory\_dep$>$ $|$ $<$theory\_dep$>$ ``,'' $<$theories\_dep$>$\\
-      \\
-      $<$part\_three$>$ & ::= &  $<$theory$>$ ``:'' $<$dependencies\_pkg$>$\\
-      $<$dependencies\_pkg$>$ & ::= &  $<$package\_dep$>$ ``@'' $<$theory\_dep$>$ $|$ $<$package\_dep$>$ ``@'' $<$theory\_dep$>$ ``,'' $<$dependencies\_pkg$>$\\
-      \hline
-    \end{tabular}
-    \caption{sd}
-  \label{tab.bnf}
-\end{table}
+  \includegraphics[width=11cm]{images/top.png}
+  \caption{Overview of metadata file for package \cde{trig} in NASALib.}
+  \label{fig.top}
+\end{figure}
