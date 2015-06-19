@@ -18,15 +18,14 @@ tool for managing PVS libraries that is freely available for
 download~\cite{pvslm} under the GNU General Public License GPLv3
 
 The $\pvslm$ tool features support for different library sources,
-libraries with several theories, and dependencies among libraries and
-theories (even from different library sources). It uses a small
-footprint description language to annotate libraries so they can be
-shared among PVS users through the $\pvslm$ tool. This language is
-intended to document each library with the information of theories it
-offers and the dependencies among them, including those dependencies
-from other libraries. This paper presents the description language in
-the form of BNF-like notation and its use is illustrated with running
-examples.
+libraries with several theories, and dependencies among theories
+within the same library. It uses a small footprint description
+language to annotate libraries so they can be shared among PVS users
+through the $\pvslm$ tool. This language is intended to document each
+library with the information of theories it offers and the
+dependencies among them, including those dependencies from other
+libraries. This paper presents the description language in the form of
+BNF-like notation and its use is illustrated with running examples.
 
 The $\pvslm$ tool is a command line tool written in the Python
 programming language. It can manage {\em any} (annotated) library that
