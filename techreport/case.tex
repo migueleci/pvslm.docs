@@ -7,7 +7,7 @@ This section shows an example step by step of the configuration and installation
 \item 
   The first step is the creation of the configuration file for the library. To reach it, it is necessary to assign a codename to the library that will be used afterward. Along with the codename, the description of the library and its URL are necessary. The URL belongs to an active git repository. The next command will create the file with all the attributes into it.\\
 
-  \texttt {\$ pvslm.py src -a nasalib `description' url\\}
+  \texttt {\$ pvslm.py src -a nasalib `The NASA PVS Library is a collection of formal PVS developments maintained by the NASA Langley Formal Methods Team.' https://github.com/nasa/pvslib.git\\}
 
 \item
   Then it is necessary to create the repository for the library. From the already created file, the URL is used to create a clone of the git repository. Besides, within the PVS path is created a folder with the codename for the library.\\
