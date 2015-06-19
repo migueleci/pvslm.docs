@@ -11,7 +11,7 @@ The source section is divided into two parts: the configuration file and the rep
 
 The other section manage the packages, their uninstall, update, list and installation, based on the already configured libraries. PVSLM is based on the dependencies graph of the library, therefore all the modifications on a package will affect the adjacent ones.
 
-As the tool has been developed for the PVS NASA library (nasalib), this one is configured by default. All the commands available on PVSLM are listed along with their description on table \ref{tab:comm}.
+As the tool has been developed for the PVS NASA library (nasalib), this one is configured by default. All the commands available on PVSLM are listed along with their description on Table \ref{tab:comm}.
 
 \begin{table}[h!]
   \begin{center}
@@ -35,12 +35,21 @@ As the tool has been developed for the PVS NASA library (nasalib), this one is c
   \label{tab:comm}
 \end{table}
 
-PVSLM works locally, but it needs Internet connection for its installation and the communication with the git repositories. Basically it is downloaded and then configured, once it is installed there are several commands that needs to connect to the git repository either to clone or pull it. For example, when a package is going to be installed, it is updated along with all its dependencies. The figure \ref{fig:archi} shows how the tool works.
+PVSLM works locally, but it needs Internet connection for its installation and the communication with the git repositories. Basically it is downloaded and then configured, once it is installed there are several commands that needs to connect to the git repository either to clone or pull it. For example, when a package is going to be installed, it is updated along with all its dependencies. The Figure \ref{fig:archi} shows how the tool works.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{archi}
+  \includegraphics[scale=0.3]{arch-pvslm}
   \caption{PVS Library Manager architecture}
   \label{fig:archi}
+\end{figure}
+
+In the Figure \ref{fig:archi-prc} the architecture of PVSLM is explained. In 1 the client sent a request to the Git repository where the tool is available. Then in 2 the Git server allows the download of the files required for the installation on step 3. In the installation, nasalib is requested in 4 to the Git server, and it is downloaded in 5. Finally in 6 the library is configured locally in the client machine. The installation and configuration of a library are reflected on steps 4 to 6.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{arch-pvslm-sbs}
+  \caption{PVS Library Manager architecture process}
+  \label{fig:archi-prc}
 \end{figure}
 
