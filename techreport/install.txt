@@ -1,0 +1,9 @@
+Package complex depends on:
+algebra
+analysis_ax
+ints
+lnexp
+reals
+structures
+trig
+Would you like to install the package(s) (Y/N): 
