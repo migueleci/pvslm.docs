@@ -42,14 +42,18 @@ symbol followed by a comma-separated list of theory names; these names
 correspond to the names of the theories included in the package (in
 any order). A body comprises any number of lines, each with either a
 package dependency or a theory dependency. A package dependency
-describes a dependency from another package and the list of
-theories from that external package being used. A theory dependency
-
+describes a dependency from another package and the list of theories
+from that external package being used. A theory dependency describes,
+for each one of the theories listed in the header of the package, its
+list of theory dependencies. In the case such a theory depends on a
+theory from other package, the name of that dependency must be
+qualified by the name of the corresponding package.
 
 
 \begin{table}
   \centering
   \begin{tabular}{r c p{8cm}}
+    \hline
     $\nterm{\cde{metadata}}$ & ::= & $\nterm{\cde{header}} \; \nterm{\cde{body}}$ \\
     $\nterm{\cde{header}}$ & ::= & `/' $\nterm{\cde{theorylist}}$ \\
     $\nterm{\cde{theorylist}}$ & ::= & $\nterm{\cde{theory}} \mid \nterm{\cde{theory}}$ `,' $\nterm{\cde{theorylist}}$ \\
@@ -57,9 +61,10 @@ theories from that external package being used. A theory dependency
     $\nterm{\cde{packagedep}}$ & ::= & $\nterm{\cde{package}}$ `/' $\nterm{\cde{theorylist}}$ \\
     $\nterm{\cde{theorydep}}$ & ::= & $\nterm{\cde{theory}}$ `:' $\nterm{\cde{qualtheorylist}}$ \\
     $\nterm{\cde{qualtheorylist}}$ & ::= & $\nterm{\cde{qualtheory}} \mid \nterm{\cde{qualtheory}}$ `,' $\nterm{\cde{qualtheorylist}}$ \\
-    $\nterm{\cde{qualtheory}}$ & ::= & $(\nterm{\cde{package}}\; \text{`@'})?$ $\nterm{\cde{theory}}$ 
+    $\nterm{\cde{qualtheory}}$ & ::= & $(\nterm{\cde{package}}\; \text{`@'})?$ $\nterm{\cde{theory}}$ \\
+    \hline
   \end{tabular}
-  %\caption{sd}
+  \caption{Syntax of the \cde{top.dep} metadata file.}
   \label{tab.bnf}
 \end{table}
 
