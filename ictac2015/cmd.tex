@@ -6,10 +6,10 @@ tool. Section~\ref{sec.nasalib} presents examples on the use of some
 of these commands.
 
 The $\pvslm$ tool provides commands at two levels. First, it provides
-commands at the level of library sources for managing library sources
-and their repositories.  Second, it provides commands at the level of
-packages for managing contents within a library. Table~\ref{tab.cmd}
-lists all commands available from $\pvslm$.
+commands at the level of library sources for managing library $\git$
+repositories.  Second, it provides commands at the level of packages
+for managing the contents of a library. Table~\ref{tab.cmd} lists all
+commands available from $\pvslm$.
 
 \begin{table}[h!]
   \begin{center}
@@ -66,8 +66,9 @@ include commands for:
   \item Updating a given package (i.e., command \cde{-u}) from a given
     library source, including {\em all} its dependencies.
   \item Deleting a given package (i.e., command \cde{-d}) from a given
-    library source, including all packages that depend on it.
-  \item Listing the contents (i.e., command \cde{-l}) of a given
+    library source (local copy), including all packages that depend on
+    it.
+  \item Listing the contents (i.e., command \cde{-l}) from a given
     library source.
 \end{itemize}
 
@@ -76,4 +77,5 @@ libraries available to the system are listed. In the second case, all
 packages of a given library are listed. In the third case, all
 dependencies of a given package and library are listed. Internally,
 the $\pvslm$ uses a topological sorting algorithm, based upon each
-package's metadata, for computing the set of dependencies.
+package's metadata, for computing the set of dependencies among
+theories and packages.

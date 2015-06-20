@@ -1,8 +1,8 @@
 \section{Installation and Architecture}
 \label{sec.install}
 
-This section includes an overview of the installation procedure
-and architecture of $\pvslm$.
+This section presents an overview of the installation procedure and
+the distributed architecture of $\pvslm$.
 
 The $\pvslm$ tool can be installed automatically from the command line
 by issuing the following command:
@@ -14,7 +14,7 @@ by issuing the following command:
 \end{verbatim}
 %
 This command uses the $\curl$ utility to download the $\pvslm$
-installation sources from Github. Once these sources are downloaded
+installation sources from GitHub. Once these sources are downloaded
 and some file permissions adjusted, the installation process is
 executed as a Python 2 script. During the installation process, the
 user can select the location in which the tool is to be installed,
@@ -32,21 +32,23 @@ Linux box.
   \label{fig.install}
 \end{figure}
 
-Upon installation, $\pvslm$ automatically configures the NASALib
-library sources and makes a local copy of them by using Git's clone
-command, so they are available for installation in PVS.
+Upon its successful installation, $\pvslm$ automatically configures
+the NASALib library sources and makes a local copy of them by using
+Git's clone command, so they are available for installation in PVS.
 
-The $\pvslm$ is desiged with a distributed architecture. It can
+The $\pvslm$ tool is desiged with a distributed architecture. It can
 connect to library sources over the internet. Each time a source is
-configured, a local copy of the library is downloaded into the host
-system as a $\git$ repository. Further updates of the library are
-carried out by using $\git$'s pull command. Figure~\ref{fig.arch}
-depicts the architecture of $\pvslm$. It is important to note that
-although Github is used as $\git$ server, it is also possible to use
-other publicly available servers such as BitBucket, for instance.
+configured, $\pvslm$ can download the library into the host system as
+a local $\git$ repository. Further updates of the library are carried
+out internally by $\pvslm$ by using $\git$'s pull
+command. Figure~\ref{fig.arch} depicts the architecture of
+$\pvslm$. It is important to note that although GitHub is used as
+$\git$ server of reference throughout this paper, it is also possible
+to use other publicly available servers such as BitBucket, for
+instance, containing an annotated library.
 
 \begin{figure}
   \centering \includegraphics[width=11cm]{images/arch.png}
-  \caption{$\pvslm$ distributed architecture.}
+  \caption{Distributed architecture of $\pvslm$.}
   \label{fig.arch}
 \end{figure}

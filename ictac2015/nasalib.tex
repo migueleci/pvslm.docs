@@ -1,4 +1,4 @@
-\section{Case study: Nasalib Configuration}
+\section{Case study: NASALib Configuration}
 \label{sec.nasalib}
 
 This section presents a step-by-step guide on the configuration and
@@ -29,33 +29,36 @@ Enable = Yes
 \end{verbatim}
 
 It is important to note that this step is unnecessary with the current
-distribution of $\pvslm$ since, by default, it includes this source.
-However, this command is included for completeness of the
-example. Also, it is not possible to have two or more library sources
-with the same name.
+distribution of $\pvslm$ since it includes this source by default.
+However, this command is included in this section for the completeness
+of the example. Also note that it is not possible to have two or more
+library sources with the same name.
 
 \paragraph{Cloning a library.} After a library source
-is configured, it is possible to issue a command for making a clone of
-the source $\git$ repository. The following command clones NASALib:
+is configured, it is possible to issue a command for cloning the
+source as a local $\git$ repository. The following command clones
+NASALib:
 %
 \begin{verbatim}
 $ pvslm.py src -c nasalib
 \end{verbatim}
 %
-The effect of this command is to make an internal copy of the entire
+The effect of this command is to obtain an internal copy of the entire
 repository via $\git$'s clone command by using the URL associated to
 the library source.
 
 \paragraph{Updating a library.} When necessary, it is possible to update
-the contents of a local copy of a library source. For the effect of updating NASALib, a user can issue the following command:
+the contents of a local copy of a library source. For the effect of
+updating the local copy of NASALib, a user can issue the following
+command:
 %
 \begin{verbatim}
 $ pvslm.py src -u nasalib
 \end{verbatim}
 %
-The effect of this command is to update an internal copy of the entire
-repository via $\git$'s pull command by using the URL associated to
-the library source.
+The effect of this command is to update the (internal) local copy of
+the entire repository via $\git$'s pull command by using the URL
+associated to the library source.
 
 \paragraph{Listing the packages in a library.} By having a local
 copy of a library, it is possible to list all its packages. Also, it
@@ -101,7 +104,8 @@ By convention, $\pvslm$ performs {\em all} installations in the folder
 specified by the \cde{PVS\_PATH} global variable.
 
 {\em Deleting a package.} Finally, a user can issue the following
-command to delete package \cde{ints} from NASALib:
+command to delete package \cde{ints} from the (internal) local copy of
+NASALib:
 %
 \begin{verbatim}
 $ pvslm.py pkg -d nasalib@ints
