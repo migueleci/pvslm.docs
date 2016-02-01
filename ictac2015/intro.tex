@@ -1,0 +1,59 @@
+\section{Introduction}
+\label{sec.intro}
+
+The Prototype Verification System~\cite{pvs-cade92} (PVS) is a
+mechanized environment for formal specification and verification.  PVS
+consists of a specification language, a number of predefined theories,
+a type checker, an interactive theorem prover that supports the use of
+several decision procedures and a symbolic model checker.  Nowadays,
+PVS is being used as a productive environment for constructing and
+maintaining large formalizations and proofs. PVS is extensible via
+libraries, collections of theories comprising formal developments that
+include definitions, theorems, and proofs in the PVS language. Given
+the increasing size of mathematical developments in the form of
+libraries, and the growing need for and adoption of mechanized proof
+environments~\cite{avigad-mech14,hales-proofs14}, it is important to
+have tools for managing these libraries. This paper presents
+$\pvslm$~\cite{pvslm}, an open source tool for managing PVS libraries
+that is freely available for download~\cite{pvslm} under the GNU
+General Public License GPLv3.
+
+The $\pvslm$ tool features support for different library sources,
+libraries with several theories, and dependencies among theories
+within the same library. It uses a small footprint description
+language to annotate libraries so they can be shared among PVS users
+with the help of the $\pvslm$ tool. This language is intended to
+document each library with the information of theories it offers and
+the dependencies among them. This paper presents the description
+language in the form of BNF-like notation; its use is illustrated with
+actual running examples.
+
+The $\pvslm$ tool is a command line tool written in the Python
+programming language. It can manage {\em any} (annotated) library that
+is publicly available from a $\git$ server through the internet.  Once
+available, such a library source can be configured in $\pvslm$, and be
+automatically downloaded from the internet and set up in the host
+system. For internet downloads, the $\pvslm$ tool depends on {\em
+  curl}, a command line tool commonly found in Linux and Mac OS X
+installations. The $\pvslm$ tool features support for updating,
+deleting, and re-installing the contents of a library source.  Several
+library sources can be configured in $\pvslm$.
+
+The current distribution of $\pvslm$ automatically installs the latest
+version of the NASA PVS Library~\cite{nasalib}, a collection of formal
+PVS developments maintained by the NASA Langley Formal Methods
+Team. As a case study for the use of the $\pvslm$ tool, this paper
+presents a step-by-step guide on how to manually configure the NASA
+PVS Library comprising the command line instructions and snapshots of
+the interaction.
+
+\paragraph{Paper outline.} Section~\ref{sec.conf} presents the
+annotation language for configuring a PVS library and introduces some
+assumptions on the internal structure of the library.
+Section~\ref{sec.install} presents an overview of the tool's
+installation and its distributed architecture.  Section~\ref{sec.cmd}
+includes the list of commands available from $\pvslm$.
+Section~\ref{sec.nasalib} presents a step-by-step guide on the
+installation and management of the NASA PVS Library that is available
+from GitHub. Finally, Section~\ref{sec.concl} presents some concluding
+remarks.

@@ -1,0 +1,116 @@
+\section{Case study: NASALib Configuration}
+\label{sec.nasalib}
+
+This section presents a step-by-step guide on the configuration and
+installation with $\pvslm$ of the NASA PVS Library (NASALib) that is
+available from GitHub.
+
+\paragraph{Library source configuration.}
+The first step is to issue a commnad for configuring the library sources
+as follows:
+%
+\begin{verbatim}
+$ pvslm.py src -a \\
+   nasalib \\
+   `The NASA PVS Library is a collection of formal PVS developments \\
+    maintained by the NASA Langley Formal Methods Team.' \\
+   https://github.com/nasa/pvslib.git
+\end{verbatim}
+%
+Internally, this command generates the following library source
+configuration file in the destination folder chosen during the
+installation process of $\pvslm$:
+%
+\begin{verbatim}
+Name = nasalib
+Description = The NASA PVS Library ...
+URL = https://github.com/nasa/pvslib.git
+Enable = Yes
+\end{verbatim}
+
+It is important to note that this step is unnecessary with the current
+distribution of $\pvslm$ since it includes this source by default.
+However, this command is included in this section for the completeness
+of the example. Also note that it is not possible to have two or more
+library sources with the same name.
+
+\paragraph{Cloning a library.} After a library source
+is configured, it is possible to issue a command for cloning the
+source as a local $\git$ repository. The following command clones
+NASALib:
+%
+\begin{verbatim}
+$ pvslm.py src -c nasalib
+\end{verbatim}
+%
+The effect of this command is to obtain an internal copy of the entire
+repository via $\git$'s clone command by using the URL associated to
+the library source.
+
+\paragraph{Updating a library.} When necessary, it is possible to update
+the contents of a local copy of a library source. For the effect of
+updating the local copy of NASALib, a user can issue the following
+command:
+%
+\begin{verbatim}
+$ pvslm.py src -u nasalib
+\end{verbatim}
+%
+The effect of this command is to update the (internal) local copy of
+the entire repository via $\git$'s pull command by using the URL
+associated to the library source.
+
+\paragraph{Listing the packages in a library.} By having a local
+copy of a library, it is possible to list all its packages. Also, it
+is possible to list the dependencies of a given package. The following
+command lists the package dependencies of package \cde{complex} from
+NASALib:
+%
+\begin{verbatim}
+$ pvslm.py pkg -l nasalib@complex
+\end{verbatim}
+%
+This command generates the following output:
+%
+\begin{verbatim}
+Package complex depends on:
+algebra
+analysis_ax
+ints
+lnexp
+reals
+structures
+trig
+\end{verbatim}
+
+\paragraph{Installing a package.} The following command installs package
+\cde{complex} in PVS.
+%
+\begin{verbatim}
+$ pvslm.py pkg -i nasalib@complex
+\end{verbatim}
+%
+Since package \cde{complex} depends on other packages, the $\pvslm$
+tool also asks for permission to install its dependencies. The
+following is the output to the user for this installation command.
+%
+\begin{verbatim}
+Package complex depends on:
+...
+Would you like to install the package(s) (y/N): 
+\end{verbatim}
+%
+By convention, $\pvslm$ performs {\em all} installations in the folder
+specified by the \cde{PVS\_PATH} global variable.
+
+{\em Deleting a package.} Finally, a user can issue the following
+command to delete package \cde{ints} from the (internal) local copy of
+NASALib:
+%
+\begin{verbatim}
+$ pvslm.py pkg -d nasalib@ints
+\end{verbatim}
+%
+If the package to be removed has dependencies, the the $\pvslm$ tool
+lists all of them and asks the user for authorization to remove them
+too.

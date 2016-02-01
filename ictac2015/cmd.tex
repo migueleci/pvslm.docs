@@ -1,0 +1,81 @@
+\section{Available Commands}
+\label{sec.cmd}
+
+This section presents the list commands available from the $\pvslm$
+tool. Section~\ref{sec.nasalib} presents examples on the use of some
+of these commands.
+
+The $\pvslm$ tool provides commands at two levels. First, it provides
+commands at the level of library sources for managing library $\git$
+repositories.  Second, it provides commands at the level of packages
+for managing the contents of a library. Table~\ref{tab.cmd} lists all
+commands available from $\pvslm$.
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{ | l | l | l | p{5cm} | }
+      \hline Level & Command & Parameters & Description \\ \hline
+      src & -a          & name desc URL         & Add a new library source with the given name, description, and URL.                   \\ \cline{2-4}
+          & -d          & name                  & Delete the given library source.                                          \\ \cline{2-4}
+          & -c          & name                  & Clone the given library source.                          \\ \cline{2-4}
+          & -u          & name                  & Update the given library source.                                \\ \cline{2-4}
+          & -r          & name                  & Remove the clone of the given library source.                                                  \\ \hline
+      pkg & -i          & library@package       & Install and update the given package, and all its dependencies.                \\ \cline{2-4}
+          & -u          & library@package       & Update a package and all its dependencies.                   \\ \cline{2-4}
+          & -d          & library@package       & Delete a  package and all ones depending on it.           \\ \cline{2-4}
+          & -l          &                       & List the installed libraries.                                       \\ \cline{2-4}
+          & -l          & library               & List the available packages of the given library.                         \\ \cline{2-4}
+          & -l          & library@package       & List all the dependencies of the given package.                               \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{$\pvslm$ command list.}
+  \label{tab.cmd}
+\end{table}
+
+At the level of library sources, the tool provides $5$ different
+commands, all identified with the special token \cde{src}. They
+include commands for:
+
+\begin{itemize}
+  \item Adding a library source (i.e., command \cde{-a}) with a
+    name, a short description, and a $\git$ URL.
+  \item Deleting a library source (i.e., command \cde{-d}) with
+    the given name.
+  \item Cloning a library source (i.e., command \cde{-c}) with the
+    given name.
+  \item Updating a library source (i.e., command \cde{-u}) with
+    the given name.
+  \item Removing the clone of a library source (i.e., command
+    \cde{-r}) with the given name.
+\end{itemize}
+
+It is important to note that none of the commands at the library
+source level modify the user's PVS installation. These commands
+exclusively modify the internals of the $\pvslm$ configuration. Also,
+note that a library source is realized exactly by one $\git$
+repository.
+
+At the level of packages, the tool provides $4$ different
+commands, all identified with the special token \cde{pkg}. They
+include commands for:
+
+\begin{itemize}
+  \item Installing and updating a given package (i.e., command
+    \cde{-i}) from a given library source, including {\em all} its
+    dependencies.
+  \item Updating a given package (i.e., command \cde{-u}) from a given
+    library source, including {\em all} its dependencies.
+  \item Deleting a given package (i.e., command \cde{-d}) from a given
+    library source (local copy), including all packages that depend on
+    it.
+  \item Listing the contents (i.e., command \cde{-l}) from a given
+    library source.
+\end{itemize}
+
+Note that listing command has three variants. In the first case, all
+libraries available to the system are listed. In the second case, all
+packages of a given library are listed. In the third case, all
+dependencies of a given package and library are listed. Internally,
+the $\pvslm$ uses a topological sorting algorithm, based upon each
+package's metadata, for computing the set of dependencies among
+theories and packages.
