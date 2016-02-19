@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.26)  19 FEB 2016 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.26)  19 FEB 2016 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,19 +671,26 @@ x
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 1.
 
-[2] <images/top.png, id=56, 567.11874pt x 185.69376pt>
-File: images/top.png Graphic file (type png)
- <use images/top.png>
-Package pdftex.def Info: images/top.png used on input line 78.
-(pdftex.def)             Requested size: 312.9803pt x 102.48322pt.
-)
-(./install.tex [3]) (./nasalib.tex
-Overfull \hbox (20.37326pt too wide) in paragraph at lines 18--18
-[]   \OT1/cmtt/m/n/10 `The NASA PVS Library is a collection of formal PVS devel
-opments \\[] 
+
+Overfull \hbox (3.57074pt too wide) in paragraph at lines 53--68
+[]\OT1/cmr/m/n/10 The top-most sym-bol in the de-scrip-tion lan-guage is $\OMS/
+cmsy/m/n/10 h[]i$\OT1/cmr/m/n/10 , while $\OMS/cmsy/m/n/10 h[]i$
  []
 
-[4 <./images/top.png>] [5]) (./concl.tex) (./main.bbl)
+
+Overfull \hbox (4.7378pt too wide) in paragraph at lines 53--68
+\OT1/cmr/m/n/10 and $\OMS/cmsy/m/n/10 h[]i$ \OT1/cmr/m/n/10 are ter-mi-nals rep
+-re-sent-ing, re-spec-tively, the-ory and pack-age names.
+ []
+
+[2] <images/top.png, id=53, 567.11874pt x 185.69376pt>
+File: images/top.png Graphic file (type png)
+ <use images/top.png>
+Package pdftex.def Info: images/top.png used on input line 85.
+(pdftex.def)             Requested size: 312.9803pt x 102.48322pt.
+)
+(./install.tex [3]) (./nasalib.tex [4 <./images/top.png>] [5]) (./concl.tex)
+(./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
  [6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
@@ -701,7 +708,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
 Here is how much of TeX's memory you used:
  12599 strings out of 493339
  177314 string characters out of 6141382
- 325214 words of memory out of 5000000
+ 327214 words of memory out of 5000000
  15767 multiletter control sequences out of 15000+600000
  21322 words of font info for 86 fonts, out of 8000000 for 9000
  953 hyphenation exceptions out of 8191
@@ -720,7 +727,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (6 pages, 209727 bytes).
+Output written on main.pdf (6 pages, 211239 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams

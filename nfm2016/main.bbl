@@ -18,7 +18,7 @@ T.~C. Hales.
 \newblock [Online; accessed 14-June-2015].
 
 \bibitem{pvs-cade92}
-S.~Owre, J.~M. Rushby, , and N.~Shankar.
+S.~Owre, J.~M. Rushby, and N.~Shankar.
 \newblock {PVS:} {A} prototype verification system.
 \newblock In D.~Kapur, editor, {\em 11th International Conference on Automated
   Deduction (CADE)}, volume 607 of {\em Lecture Notes in Artificial
@@ -28,6 +28,6 @@ S.~Owre, J.~M. Rushby, , and N.~Shankar.
 M.~Romero and C.~Rocha.
 \newblock A {PVS} library manager.
 \newblock \url{http://migueleci.github.io/pvslm/}, June 2015.
-\newblock [Online; accessed 14-June-2015].
+\newblock [Online; accessed 14-Feb-2016].
 
 \end{thebibliography}

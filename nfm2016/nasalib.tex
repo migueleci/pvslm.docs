@@ -1,4 +1,4 @@
-\section{Case study: NASALib Configuration}
+\section{Case study: Managing NASALib with $\pvslm$}
 \label{sec.nasalib}
 
 This section presents a step-by-step guide on the configuration and
@@ -9,36 +9,36 @@ available from GitHub.
 The first step is to issue a commnad for configuring the library sources
 as follows:
 %
-\begin{verbatim}
+{\small\begin{verbatim}
 $ pvslm.py src -a \\
    nasalib \\
    `The NASA PVS Library is a collection of formal PVS developments \\
     maintained by the NASA Langley Formal Methods Team.' \\
    https://github.com/nasa/pvslib.git
-\end{verbatim}
+\end{verbatim}}
 %
 Internally, this command generates the library source
 configuration file in the destination folder chosen during the
 installation process of $\pvslm$.
 
 It is important to note that this step is unnecessary with the current
-distribution of $\pvslm$ since it includes this source by default.
-However, this command is included in this section for the completeness
-of the example. Also note that it is not possible to have two or more
-library sources with the same name.
+distribution of $\pvslm$ because it installs the NASALib library
+source by default.  However, this command is included in this section
+for the sake of a complete installation example. Also note that it is
+not possible to have two or more library sources with the same name.
 
 \paragraph{Cloning a library.} After a library source
 is configured, it is possible to issue a command for cloning the
-source as a local $\git$ repository. The following command clones
-NASALib:
+library source packages into a local $\git$ repository. The following
+command clones NASALib:
 %
 \begin{verbatim}
 $ pvslm.py src -c nasalib
 \end{verbatim}
 %
-The effect of this command is to obtain an internal copy of the entire
-repository via $\git$'s clone command by using the URL associated to
-the library source.
+This command internally uses $\git$'s clone command to obtain a local
+copy of the entire library source repository by using the URL
+configured with the library source.
 
 \paragraph{Updating a library.} When necessary, it is possible to update
 the contents of a local copy of a library source. For the effect of
@@ -49,9 +49,9 @@ command:
 $ pvslm.py src -u nasalib
 \end{verbatim}
 %
-The effect of this command is to update the (internal) local copy of
-the entire repository via $\git$'s pull command by using the URL
-associated to the library source.
+The effect of this command is to update the local copy of the entire
+library via $\git$'s pull command by using the URL associated to
+the library source.
 
 \paragraph{Listing the packages in a library.} By having a local
 copy of a library, it is possible to list all its packages. Also, it
