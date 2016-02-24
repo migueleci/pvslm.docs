@@ -17,43 +17,49 @@ Library~\cite{nasalib} maintained by the NASA Langley Formal Methods
 Team: a large collection of freely-available formal developments in
 PVS comprising more than 40 theories, 24000+ theorems, and 136000+ and
 3623000+ lines of, respectively, specification and proofs, all of
-theses ranging from trigonometry to graphs and topology.  In general,
-given the increasing size of mathematical developments in the form of
-libraries and the growing need for and adoption of mechanized proof
-environments~\cite{avigad-mech14,hales-proofs14} such as PVS, it is
-important to have tools for managing such libraries.
+theses ranging from trigonometry to graphs and topology.
 
-This paper presents $\pvslm$~\cite{pvslm}, an utility for assisting in
-the management of PVS libraries, comprising: (i) a description
-language for annotating PVS libraries, with a small footprint but
-expressive enough for describing complex dependencies among library
-theories; and (ii) an implementation for managing PVS libraries
-annotated with this language, offering support for several library
-sources. In $\pvslm$, the description language is designed to
-represent a PVS library as a collection of packages, with a package
-consisting of a collection of PVS theories. In this sense, the
-annotations can help in documenting each library with the information
-of the theories it offers and their dependencies, so it can be shared
-among PVS users with the help of the $\pvslm$ implementation. The
-$\pvslm$ implementation is a command line tool offering support for
-adding, updating, deleting, and re-installing the contents of a
-library source, and also managing several library sources at the same
-time.
+Given the increasing size of mathematical developments in the form of
+libraries and the growing need for and adoption of mechanized proof
+environments~\cite{avigad-mech14,hales-proofs14}, such as PVS, it is
+important to have tools for managing these libraries. This paper
+presents $\pvslm$~\cite{pvslm}, an utility for assisting in the
+management of PVS libraries, comprising: (i) a description language
+for annotating PVS libraries, with a small footprint but expressive
+enough for describing complex dependencies among library theories; and
+(ii) an implementation for managing PVS libraries annotated with this
+language, offering support for several library sources. In $\pvslm$,
+the description language is designed to represent a PVS library as a
+collection of packages, with a package consisting of a collection of
+PVS theories. In this setting, $\pvslm$ annotations can help in
+documenting each library with information regarding its theories and
+their dependencies, so that they can be shared among PVS users with
+the help of $\pvslm$'s implementation. The $\pvslm$ implementation is
+a command line tool offering support for adding, updating, deleting,
+and re-installing the contents of a library source, and also managing
+several library sources distributed online.
 
 The $\pvslm$ description language is presented in this paper with the
 help of BNF-like notation. The $\pvslm$ implementation is written in
 the Python programming language and it can manage {\em any}
 (annotated) PVS library that is publicly available from a $\git$
 server through the internet: once available, such a library source can
-be configured in $\pvslm$, be automatically downloaded from the
-internet, and set up in the host system. As a case study for the use
-of the $\pvslm$ tool, this paper presents a step-by-step guide on how
-to manually configure the NASA PVS Library comprising the command line
-instructions and snapshots of the user interaction.
+be configured in the $\pvslm$ implementation and automatically set up
+in the host system. As a case study for the use of the $\pvslm$ tool,
+this paper presents a step-by-step guide on how to configure the NASA
+PVS Library, including command line instructions and snapshots of user
+interaction.
 
-The current distribution of $\pvslm$ is freely available for
-download~\cite{pvslm} under the GNU General Public License GPLv3 and
-it automatically installs the latest version of the NASA PVS Library,
-which is currently annotated with the $\pvslm$ description language.
+The current release of $\pvslm$ is freely available for
+download~\cite{pvslm} under the GNU General Public License GPLv3. This
+release automatically installs the latest version of the NASA PVS
+Library, which is currently annotated with $\pvslm$'s description
+language.
 
-\paragraph{Paper outline.}
+\paragraph{Paper outline.} Section~\ref{sec.conf} presents
+the $\pvslm$ description language. Sections~\ref{sec.install}
+and~\ref{sec.nasalib} present, respectively, instructions for
+obtaining and installing the $\pvslm$ implementation, and a
+step-by-step guide on the configuration and installation with $\pvslm$
+of the NASA PVS Library. Some concluding remarks are presented in
+Section~\ref{sec.concl}.
