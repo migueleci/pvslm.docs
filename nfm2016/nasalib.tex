@@ -12,11 +12,11 @@ The first step is to issue a command for configuring the library sources
 as follows:
 %
 {\small\begin{verbatim}
-$ pvslm.py src -a \\
-   nasalib \\
-   `The NASA PVS Library is a collection of formal PVS developments \\
-    maintained by the NASA Langley Formal Methods Team.' \\
-   https://github.com/nasa/pvslib.git
+  $ pvslm.py src -a \\
+      nasalib \\
+      `The NASA PVS Library is a collection of formal PVS developments \\
+         maintained by the NASA Langley Formal Methods Team.' \\
+      https://github.com/nasa/pvslib.git
 \end{verbatim}}
 %
 \noindent This command generates the library source configuration file
@@ -36,9 +36,9 @@ step is included for the sake of completeness of the example.
 implementation for downloading a library once its library source file
 has been created. The following command downloads NASALib:
 %
-\begin{verbatim}
-$ pvslm.py src -c nasalib
-\end{verbatim}
+{\small\begin{verbatim}
+  $ pvslm.py src -c nasalib
+\end{verbatim}}
 %
 Internally, this command uses $\git$'s cloning technology so that the
 NASALib repository is copied locally from the URL configured with the
@@ -48,9 +48,9 @@ library source.
 copy of a library. For updating the local copy of NASALib, an user can
 issue the following command:
 %
-\begin{verbatim}
-$ pvslm.py src -u nasalib
-\end{verbatim}
+{\small\begin{verbatim}
+  $ pvslm.py src -u nasalib
+\end{verbatim}}
 %
 The effect of this command is to update the entire local copy of
 \cde{nasalib} via $\git$'s pull command from the URL configured with
@@ -61,21 +61,21 @@ copy of a library is available, it is possible to list all its
 packages and their dependencies. The following command can be issued
 to list the dependencies of package \cde{complex} in NASALib:
 %
-\begin{verbatim}
-$ pvslm.py pkg -l nasalib@complex
-\end{verbatim}
+{\small\begin{verbatim}
+  $ pvslm.py pkg -l nasalib@complex
+\end{verbatim}}
 %
 The output of this command is as follows:
 %
 {\small\begin{verbatim}
-Package complex depends on:
-algebra
-analysis_ax
-ints
-lnexp
-reals
-structures
-trig
+  Package complex depends on:
+  algebra
+  analysis_ax
+  ints
+  lnexp
+  reals
+  structures
+  trig
 \end{verbatim}}
 
 \paragraph{Installing a package in PVS.} The $\pvslm$ implementation
@@ -83,9 +83,9 @@ can install a package from a local copy of a library in a working PVS
 environment. The following command installs package \cde{complex} from
 NASALib:
 %
-\begin{verbatim}
-$ pvslm.py pkg -i nasalib@complex
-\end{verbatim}
+{\small\begin{verbatim}
+  $ pvslm.py pkg -i nasalib@complex
+\end{verbatim}}
 %
 Since package \cde{complex} depends on other packages, the $\pvslm$
 tool will ask for permission to install all these dependencies if they
@@ -93,9 +93,9 @@ are not already installed. The following is the output to the user for
 this installation command.
 %
 {\small\begin{verbatim}
-Package complex depends on:
-...
-Would you like to install the package(s) (y/N): 
+  Package complex depends on:
+  ...
+  Would you like to install the package(s) (y/N):
 \end{verbatim}}
 %
 By convention, $\pvslm$ performs {\em all} installations in the folder
@@ -105,9 +105,9 @@ specified by the \cde{PVS\_PATH} global variable.
 command to delete package \cde{ints} from the (internal) local copy of
 NASALib:
 %
-\begin{verbatim}
-$ pvslm.py pkg -d nasalib@ints
-\end{verbatim}
+{\small\begin{verbatim}
+  $ pvslm.py pkg -d nasalib@ints
+\end{verbatim}}
 %
 If there are packages that depend on the package to be removed, the
 $\pvslm$ tool will list all of them and will ask the user for
