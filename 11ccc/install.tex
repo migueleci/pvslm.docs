@@ -1,0 +1,28 @@
+\section{Obtaining the $\pvslm$ Implementation}
+\label{sec.install}
+
+The $\pvslm$ tool can be installed automatically from the terminal in
+*nix systems by issuing the following command:
+%
+{\small\begin{verbatim}
+  curl http://migueleci.github.io/pvslm/downloads/pvslm-conf.py \
+    -o pvslm-install && chmod +x pvslm-install && \
+    python ./pvslm-install
+\end{verbatim}}
+%
+This command uses the $\curl$ utility to download the $\pvslm$
+installation sources from GitHub. Once these sources are downloaded
+and some file permissions adjusted, the installation script is
+executed as a Python 2 program. During the installation process, the
+user can select the value for global variable \cde{PVS\_PATH}, i.e.,
+the location in which the tool is to be installed, including where the
+configuration files for the library sources and the local copy of the
+libraries are to be placed. This procedure and the installation script
+have been tested both on Linux and Mac OS X boxes.
+
+Upon its successful installation, $\pvslm$ automatically configures
+the NASALib library sources and makes a local copy of them by using
+{\em git}'s clone command, so they are available for installation in
+PVS.  Further information on the installation procedure is available
+from~\cite{pvslm}, e.g. a detailed list of the tool commands and some
+examples of the configuration files.

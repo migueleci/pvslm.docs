@@ -1,0 +1,30 @@
+
+nombres (orden lexicografico), Camilo Rocha and Miguel Romero
+Abstract:
+  linea 4 - linea 8, This paper present
+Introduction 
+  Parrafo 1, linea 7, collections theories
+  Parrafo 1, linea 10, '[]' sin contenido
+  Referencias tienen algun oredn?
+  Punto final del primer parrafo
+  Parrafo 2, linea 6, QUITAR including those dependencies from other libraries
+  Parrafo 3, linea 4, configured in pvslm, and be ... and set up ...
+  Parrafo 3, ultima linea, QUITAR with the tool managing automatically dependencies among them.
+  Cuarto parrafo, linea 4, la arquitectura esta dentro de la seccion 3.
+Library Configuration
+  Segundo parrafo, linea 5. a library is a collection of packages and a package is a collection of 'theories'.
+  Fig. 1: The structure of package analysis.
+  Parrafo 4, line 4, It contains 5 package dependencies and '6' theory dependencies.
+Installation and Architecture
+  Parrafo 2. ultima linea,  in 'an' Ubuntu Linux box. 'on an' Ubuntu Linux box.
+  Fig. 3. in 'an' Ubuntu Linux box. 'on an Ubuntu Linux box.
+  Parrago 4, primer linea, The pvslm is 'designed'
+Available Commands
+  Primer Parrafo, This section presents the list 'of' commands ... Section 5 presents 
+  Segundo parrafo, linea 1, First, it provides commands at the level of 'library sources' for managing 'library sources' (them) and their repositories.
+  Ultimo parrafo, linea 1, If the package to be removed has dependencies, (Si hay paquetes que dependen del paquete que va a ser eliminado)
+  Deleting no tiene \paragraph en el archivo .tex 
+Concluding Remarks
+  Parrafo 1, linea 2, This tool features support for different library sources, libraries with several theories, and dependencies 'between' theories (withing the same library source).
+  Parrafo 1, linea 4, The tool is ... The tool uses 
+  Parrafo 2, linea 1, First, it is important to make ... Also, it is important to
