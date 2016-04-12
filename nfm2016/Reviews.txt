@@ -1,0 +1,59 @@
+Review 1
+The authors have developed a library management tool (called pvslm) for
+working with libraries of PVS theories. Included is an annotation language
+for describing library and theory dependencies. The annotations appear in
+library metadata files spread throughout the library directories. Use of
+the tool is illustrated with the NASA PVS Library as an example.
+Serious users of PVS would no doubt benefit from the pvslm tool created
+by the authors. As with any large collection of artifacts, having tool
+support makes the task of using and manipulating the artifacts easier.
+The pvslm tool appears to offer practical, useful features, such as
+tracking dependencies, installing and updating packages, and listing
+library contents.
+Having said that, the paper does not really offer much of a research
+contribution. It describes a practical tool, a basic utility function,
+but it would not be challenging for anyone to create something similar.
+The description language is rather modest; it has no attributes that
+are particularly noteworthy. While the tool itself is a helpful
+contribution to the PVS community, this paper would not give the NFM
+audience much that is of great interest.
+The authors have also left out some aspects of the work that might have
+made the paper more interesting. For example, where did the dependency
+information in the metadata come from? Was it auto-generated from the
+theory files? If so, how was that done? Also, the paper only mentions
+features for users of libraries. What about features for those who
+create or maintain libraries? Does pvslm help with the process of
+starting a new library?
+
+Review 2
+This short paper describes the PVSLM tool that manages libraries of PVS 
+libraries, especially the dependencies between library theories. It is 
+illustrated with detailed instructions for PVSLM management of the latest 
+version of the NASA PVS library (example is primarily the trig package). 
+The implemented tool (python) can be used on any PVS library available 
+through a git server, and is available as a Gnu license.
+The paper itself is a combination of a synopsis of a PVSLM user guide 
+and description of concepts and metadata for theory library management. 
+The paper reports on annotating the NASA PVS Library, which attests to 
+the PVLSM tool’s robustness. Future work includes using it on other PVS 
+libraries, and configuration management of PVS libraries with different 
+versions of PVS. 
+Comparison to similar tools used for organizing theories in other 
+executable proof systems is not substantial. Foundational issues such 
+as how the tool relates to the rich literature on theory morphisms is 
+not included in the paper The nature of the paper as essentially a 
+synopsis of the user guide led to borderline score.
+
+Review 3
+The authors describe the tool pvslm, a library management system for PVS.
+Library management tools are useful, and are available in many other 
+systems (e.g., Cabal for Haskell).
+pvslm organizes libraries into packages, and packages are collections of 
+PVS theories.
+As far as I can tell, there is very little specific to PVS in this tool. 
+It is also not clear how innovative the tool is as a package management system.
+The authors do not compare pvslm with existing systems (e.g. Cabal).
+Important features such as version management are still missing.
+The case study is also not very convincing, it is not hard to download 
+and install the NASA PVS library using the github repository 
+(https://github.com/nasa/pvslib).
