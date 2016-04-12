@@ -9,15 +9,13 @@ available from GitHub.
 The first step is to issue a commnad for configuring the library sources
 as follows:
 %
-{\small
-\begin{lstlisting}
+{\small\begin{verbatim}
 $ pvslm.py src -a \\
    nasalib \\
    `The NASA PVS Library is a collection of formal PVS developments \\
     maintained by the NASA Langley Formal Methods Team.' \\
    https://github.com/nasa/pvslib.git
-\end{lstlisting}
-}
+\end{verbatim}}
 %
 Internally, this command generates the library source
 configuration file in the destination folder chosen during the
@@ -89,11 +87,11 @@ Since package \cde{complex} depends on other packages, the $\pvslm$
 tool also asks for permission to install its dependencies. The
 following is the output to the user for this installation command.
 %
-\begin{lstlisting}
+\begin{verbatim}
 Package complex depends on:
 ...
 Would you like to install the package(s) (y/N): 
-\end{lstlisting}
+\end{verbatim}
 %
 By convention, $\pvslm$ performs {\em all} installations in the folder
 specified by the \cde{PVS\_PATH} global variable.
