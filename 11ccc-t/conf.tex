@@ -30,7 +30,8 @@ in its \cde{top.dep} file, located inside folder
 description language, in BNF-like notation, used to populate this
 metadata file.
 
-\begin{table*}
+
+\begin{table}
   \centering
   \begin{tabular}{r c p{8cm}}
     \hline \\
@@ -47,7 +48,7 @@ metadata file.
   \end{tabular}
   \caption{Syntax of the \cde{top.dep} metadata file in NASALib.}
   \label{tab.bnf}
-\end{table*}
+\end{table}
 
 The topmost symbol in the description language is
 $\nterm{\cde{metadata}}$, while $\nterm{\cde{theory}}$ and
@@ -79,9 +80,9 @@ other hand, theory \cde{trig\_doc} has no dependencies, while theory
 \cde{sqrt}, it is explicitly stated that such a theory is in package
 \cde{reals}.
 
-\begin{figure*}
+\begin{figure}
   \centering
-  \includegraphics[width=12cm]{images/top.png}
+  \includegraphics[width=11cm]{images/top.png}
   \caption{Overview of metadata file for package \cde{trig} in NASALib.}
   \label{fig.top}
-\end{figure*}
+\end{figure}
