@@ -1,0 +1,60 @@
+\documentclass[journal,comsoc]{IEEEtran}
+
+\input{packages}
+\input{macros}
+
+\usepackage[T1]{fontenc}% optional T1 font encoding
+\usepackage{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage[cmintegrals]{newtxmath}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Library Management for PVS}
+
+\author{Miguel~Romero,
+        Camilo~Rocha}
+
+\maketitle
+
+\input{abstract}
+
+\begin{IEEEkeywords}
+%Communications Society, IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+\input{intro}
+
+\input{conf}
+
+\input{install}
+
+\input{nasalib}
+
+\input{concl}
+
+\section*{Acknowledgment}
+The authors would like to thank
+C. Mu\~noz in the NASA Langley Formal Methods Team for his
+encouragement, ideas, and suggestions, specially for the help with the
+definition of the metadata description language for packages.
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{biblio}
+
+\end{document}
+
+
