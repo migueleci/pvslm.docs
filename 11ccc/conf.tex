@@ -1,6 +1,26 @@
 \section{The $\pvslm$ Description Language}
 \label{sec.conf}
 
+\begin{table*}[pthb]
+  \centering
+  \begin{tabular}{r c p{8cm}}
+    \hline \\
+    $\nterm{\cde{metadata}}$ & ::= & $\nterm{\cde{header}} \; \nterm{\cde{body}}$ \\
+    $\nterm{\cde{header}}$ & ::= & `/' $\nterm{\cde{theorylist}}$ \\
+    $\nterm{\cde{theorylist}}$ & ::= & $\nterm{\cde{theory}} \mid \nterm{\cde{theory}}$ `,' $\nterm{\cde{theorylist}}$ \\
+    $\nterm{\cde{body}}$ & ::= & $(\nterm{\cde{packagedep}} \mid \nterm{\cde{theorydep}})*$ \\
+    $\nterm{\cde{packagedep}}$ & ::= & $\nterm{\cde{package}}$ `/' $\nterm{\cde{theorylist}}$ \\
+    $\nterm{\cde{theorydep}}$ & ::= & $\nterm{\cde{theory}}$ `:' $\nterm{\cde{qualtheorylist}} ?$ \\
+    $\nterm{\cde{qualtheorylist}}$ & ::= & $\nterm{\cde{qualtheory}} \mid \nterm{\cde{qualtheory}}$ `,' $\nterm{\cde{qualtheorylist}}$ \\
+    $\nterm{\cde{qualtheory}}$ & ::= & $(\nterm{\cde{package}}\; \text{`@'})?$ $\nterm{\cde{theory}}$ \\
+    \\
+    \hline
+  \end{tabular}
+  \caption{Syntax of the \cde{top.dep} metadata file in NASALib.}
+  \label{tab.bnf}
+\end{table*}
+
+
 This section presents a formal definition of the $\pvslm$ description
 language in the form of BNF-like notation. It also presents the main
 conventions and assumptions used by the $\pvslm$ tool for managing PVS
@@ -29,25 +49,6 @@ in its \cde{top.dep} file, located inside folder
 \cde{pvsbin}. Table~\ref{tab.bnf} presents the syntax of $\pvslm$
 description language, in BNF-like notation, used to populate this
 metadata file.
-
-\begin{table*}[h]
-  \centering
-  \begin{tabular}{r c p{8cm}}
-    \hline \\
-    $\nterm{\cde{metadata}}$ & ::= & $\nterm{\cde{header}} \; \nterm{\cde{body}}$ \\
-    $\nterm{\cde{header}}$ & ::= & `/' $\nterm{\cde{theorylist}}$ \\
-    $\nterm{\cde{theorylist}}$ & ::= & $\nterm{\cde{theory}} \mid \nterm{\cde{theory}}$ `,' $\nterm{\cde{theorylist}}$ \\
-    $\nterm{\cde{body}}$ & ::= & $(\nterm{\cde{packagedep}} \mid \nterm{\cde{theorydep}})*$ \\
-    $\nterm{\cde{packagedep}}$ & ::= & $\nterm{\cde{package}}$ `/' $\nterm{\cde{theorylist}}$ \\
-    $\nterm{\cde{theorydep}}$ & ::= & $\nterm{\cde{theory}}$ `:' $\nterm{\cde{qualtheorylist}} ?$ \\
-    $\nterm{\cde{qualtheorylist}}$ & ::= & $\nterm{\cde{qualtheory}} \mid \nterm{\cde{qualtheory}}$ `,' $\nterm{\cde{qualtheorylist}}$ \\
-    $\nterm{\cde{qualtheory}}$ & ::= & $(\nterm{\cde{package}}\; \text{`@'})?$ $\nterm{\cde{theory}}$ \\
-    \\
-    \hline
-  \end{tabular}
-  \caption{Syntax of the \cde{top.dep} metadata file in NASALib.}
-  \label{tab.bnf}
-\end{table*}
 
 The topmost symbol in the description language is
 $\nterm{\cde{metadata}}$, while $\nterm{\cde{theory}}$ and
@@ -79,7 +80,7 @@ other hand, theory \cde{trig\_doc} has no dependencies, while theory
 \cde{sqrt}, it is explicitly stated that such a theory is in package
 \cde{reals}.
 
-\begin{figure*}[h]
+\begin{figure*}[pthb]
   \centering
   \includegraphics[width=12cm]{images/top.png}
   \caption{Overview of metadata file for package \cde{trig} in NASALib.}
