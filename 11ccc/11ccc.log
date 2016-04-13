@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 APR 2016 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 APR 2016 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -933,6 +933,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 3118) in paragraph at lines 52--67
 []\T1/ptm/m/n/10 The top-most sym-bol in the de-scrip-tion lan-guage is
  []
@@ -965,8 +968,11 @@ File: images/top.png Graphic file (type png)
  <use images/top.png>
 Package pdftex.def Info: images/top.png used on input line 84.
 (pdftex.def)             Requested size: 341.43306pt x 111.79962pt.
-)
-(./install.tex
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./install.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -977,7 +983,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ) (./cmd.tex
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./nasalib.tex [2]
 
