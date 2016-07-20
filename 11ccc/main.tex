@@ -1,19 +1,49 @@
 \documentclass[journal,comsoc]{IEEEtran}
 
+\IEEEoverridecommandlockouts 
+
 \input{packages}
 \input{macros}
 
 \usepackage[T1]{fontenc}% optional T1 font encoding
 \usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{kantlipsum}
 \interdisplaylinepenalty=2500
 \usepackage[cmintegrals]{newtxmath}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[C]{IEEE 11CCC 2016}     %% C or L or R.
+  %\fancyfoot[L]{This is a notice}%                        %% C or L or R.
+  \renewcommand{\footrulewidth}{0pt} 
+  \renewcommand{\headrulewidth}{0pt}
+}
+\usepackage{eso-pic}
+
 \begin{document}
 
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \setlength\unitlength{1in}%
+    \hspace*{\dimexpr0.5\paperwidth\relax}%%  change \dimexpr0.5\paperwidth\relax appropriately
+    \makebox(0,-0.75)[c]{\Large IEEE 11CCC 2016}%
+}}
+
 \title{Library Management for PVS}
+
+%\author{\authorblockN{Miguel Romero}
+%\authorblockA{Escuela Colombiana de Ingenier\'{i}a\\
+%Bogot\'{a}, Colombia\\
+%Email: miguel.romero@mail.escuelaing.edu.co}
+%\and
+%\authorblockN{Camilo Rocha}
+%\authorblockA{Pontificia Universidad Javeriana \\
+%Cali, Colombia\\
+%Email: camilo.rocha@javerianacali.edu.co}}
 
 \author{
 \IEEEauthorblockN{Miguel Romero\IEEEauthorrefmark{1}, Camilo Rocha\IEEEauthorrefmark{2}\\}

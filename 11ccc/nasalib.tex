@@ -5,8 +5,8 @@ This section presents a step-by-step guide on the configuration and
 installation with $\pvslm$ of the NASA PVS Library (NASALib) that is
 available from GitHub.
 
-\paragraph{Library source configuration.}
-The first step is to issue a commnad for configuring the library sources
+\paragraph{Library source configuration}
+The first step is to issue a command for configuring the library sources
 as follows:
 %
 {\small
@@ -29,7 +29,7 @@ source by default.  However, this command is included in this section
 for the sake of a complete installation example. Also note that it is
 not possible to have two or more library sources with the same name.
 
-\paragraph{Cloning a library.} After a library source
+\paragraph{Cloning a library} After a library source
 is configured, it is possible to issue a command for cloning the
 library source packages into a local $\git$ repository. The following
 command clones NASALib:
@@ -42,7 +42,7 @@ This command internally uses $\git$'s clone command to obtain a local
 copy of the entire library source repository by using the URL
 configured with the library source.
 
-\paragraph{Updating a library.} When necessary, it is possible to update
+\paragraph{Updating a library} When necessary, it is possible to update
 the contents of a local copy of a library source. For the effect of
 updating the local copy of NASALib, a user can issue the following
 command:
@@ -55,7 +55,7 @@ The effect of this command is to update the local copy of the entire
 library via $\git$'s pull command by using the URL associated to
 the library source.
 
-\paragraph{Listing the packages in a library.} By having a local
+\paragraph{Listing the packages in a library} By having a local
 copy of a library, it is possible to list all its packages. Also, it
 is possible to list the dependencies of a given package. The following
 command lists the package dependencies of package \cde{complex} from
@@ -78,7 +78,7 @@ structures
 trig
 \end{verbatim}
 
-\paragraph{Installing a package.} The following command installs package
+\paragraph{Installing a package} The following command installs package
 \cde{complex} in PVS.
 %
 \begin{verbatim}
@@ -98,7 +98,7 @@ Would you like to install the package(s) (y/N):
 By convention, $\pvslm$ performs {\em all} installations in the folder
 specified by the \cde{PVS\_PATH} global variable.
 
-\paragraph{Deleting a package.} Finally, a user can issue the following
+\paragraph{Deleting a package} Finally, a user can issue the following
 command to delete package \cde{ints} from the (internal) local copy of
 NASALib:
 %

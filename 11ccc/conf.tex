@@ -21,11 +21,11 @@
 \end{table*}
 
 This section presents a formal definition of the $\pvslm$ description
-language in the form of BNF-like notation. It also presents the main
-conventions and assumptions used by the $\pvslm$ tool for managing PVS
-libraries.
+language in the form of BNF-like notation, adopted from the NASA PVS
+library. It also presents the main conventions and assumptions used 
+by the $\pvslm$ tool for managing PVS libraries.
 
-\paragraph{Terminology.}
+\paragraph{Terminology}
 The $\pvslm$ tool distinguishes three levels of aggregation for PVS
 sources. A PVS theory is the building block of a library managed by
 $\pvslm$. A {\em package} is a collection of theories.  A {\em
@@ -34,7 +34,7 @@ of packages. In summary, a library is a collection of packages and a
 package is a collection of theories. The $\pvslm$ tool can manage
 several libraries each with several packages.
 
-\paragraph{Package configuration.}
+\paragraph{Package configuration}
 A package is defined in a folder at the root of the library source,
 with the folder name defining the name of the package. Each folder
 contains the \cde{pvs} and \cde{prf} files for its theories, and a
@@ -42,7 +42,7 @@ folder named \cde{pvsbin}: this is a special folder used by the
 $\pvslm$ implementation for accessing the {\em package metadata} from
 a file named \cde{top.dep}.
 
-\paragraph{Package metadata.} The metadata of a package is defined
+\paragraph{Package metadata} The metadata of a package is defined
 in its \cde{top.dep} file, located inside folder
 \cde{pvsbin}. Table~\ref{tab.bnf} presents the syntax of $\pvslm$
 description language, in BNF-like notation, used to populate this
@@ -80,7 +80,7 @@ other hand, theory \cde{trig\_doc} has no dependencies, while theory
 
 \begin{figure*}[pthb]
   \centering
-  \includegraphics[width=12cm]{images/top.png}
+  \includegraphics{images/top2.png}
   \caption{Overview of metadata file for package \cde{trig} in NASALib.}
   \label{fig.top}
 \end{figure*}
