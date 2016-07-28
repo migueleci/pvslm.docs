@@ -18,20 +18,20 @@ In conclusion, I think psvlm is a worthwhile new tool for PVS users.
 
 Some minor comments for the authors:
 
-The use of ".:" is probably an artifact of LaTeX environments, please
-try to fix it and use either "." or ":", this appears many times, for
-example in the introduction at "a) Paper outline.:".
+[DONE] The use of ".:" is probably an artifact of LaTeX environments,
+please try to fix it and use either "." or ":", this appears many
+times, for example in the introduction at "a) Paper outline.:".
 
-Section 4: "presents the list commands available from" --> 'presents
-the list of commands offered by'
+[DONE] Section 4: "presents the list commands available from" -->
+'presents the list of commands offered by'
 
-End of next paragraph again: "commands available from pvslm" -->
-"commands pvslm offers"
+[DONE] End of next paragraph again: "commands available from pvslm"
+--> "commands pvslm offers"
 
-Section 5: "a commnad for" --> "a command for"
+[DONE] Section 5: "a commnad for" --> "a command for"
 
-Figure 1: could you take a higher-resolution screenshot, or use an
-actual code listing? The existing picture does look blurry.
+[TODO] Figure 1: could you take a higher-resolution screenshot, or use
+an actual code listing? The existing picture does look blurry.
 
 
 Reviewer 2
