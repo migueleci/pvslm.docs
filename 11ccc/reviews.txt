@@ -1,0 +1,67 @@
+Reviewer 1
+----------
+
+This paper presents a library management tool for PVS. It is
+surprising that PVS does not offer anything like this out of the box,
+and it seems like a good idea to try and integrate this. I encourage
+the authors of this paper to consider this, and bring it up with the
+PVS maintainers.
+
+Indeed, productivity with a verification tool, like PVS, crucially
+depends on being able to efficiently manage different theories and
+their dependencies, particularly when they are from different source
+projects.
+
+In conclusion, I think psvlm is a worthwhile new tool for PVS users.
+
+
+
+Some minor comments for the authors:
+
+The use of ".:" is probably an artifact of LaTeX environments, please
+try to fix it and use either "." or ":", this appears many times, for
+example in the introduction at "a) Paper outline.:".
+
+Section 4: "presents the list commands available from" --> 'presents
+the list of commands offered by'
+
+End of next paragraph again: "commands available from pvslm" -->
+"commands pvslm offers"
+
+Section 5: "a commnad for" --> "a command for"
+
+Figure 1: could you take a higher-resolution screenshot, or use an
+actual code listing? The existing picture does look blurry.
+
+
+Reviewer 2
+----------
+
+This paper presents a library management system for the Prototype
+Verification System (PVS). Because a formal verification using PVS
+typically bases on many existing definitions and theories, maintaining
+such libraries is important for usability. The pvslm tool presented in
+this paper provides useful functions to manage complex PVS libraries,
+particularly for the NASA PVS library, maintained by the NASA Langley
+Formal Methods team.
+
+Section 2 explains the pvslm description language to define some
+metadata and dependency information. Section 3 explains how to install
+the tool using the curl utility. Section 4 explains some available
+commands, and Section 5 illustrates the usage of the tool for the NASA
+PVS Library. The webpage in [5] also includes some usage and
+installation guide. This paper is generally well written, and the tool
+seems to be easy to use. So I think that this paper can be accepted as
+a short tool paper, since the contribution would be quite useful for
+PVS-based formal verification, especially for beginners.
+
+My only concern is that the authors need to explain some comparison
+between their tool and the existing functionalities of NASA PVS
+library. As implicitly mentioned in the paper, the NASA PVS library
+provides .dep file including metadata and dependency information. I
+wonder whether the pvslm description language is defined by the
+authors, or the authors adopted the language from the format of .dep
+files in the NASA PVS library. Also, the NASA PVS library provides
+some scripts to maintain dependencies between packages and theories,
+although the pvslm tool seems to be easier to use and more
+powerful. Some explanation about these points would be helpful.
