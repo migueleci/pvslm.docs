@@ -15,7 +15,6 @@ projects.
 In conclusion, I think psvlm is a worthwhile new tool for PVS users.
 
 
-
 Some minor comments for the authors:
 
 [DONE] The use of ".:" is probably an artifact of LaTeX environments,
@@ -30,7 +29,7 @@ times, for example in the introduction at "a) Paper outline.:".
 
 [DONE] Section 5: "a commnad for" --> "a command for"
 
-[TODO] Figure 1: could you take a higher-resolution screenshot, or use
+[DONE] Figure 1: could you take a higher-resolution screenshot, or use
 an actual code listing? The existing picture does look blurry.
 
 
@@ -65,3 +64,9 @@ files in the NASA PVS library. Also, the NASA PVS library provides
 some scripts to maintain dependencies between packages and theories,
 although the pvslm tool seems to be easier to use and more
 powerful. Some explanation about these points would be helpful.
+
+[TODO] Explain we used the syntax already available from NasaLib for
+building the tool.
+
+[TODO] Explain how pvslm is different from the current scripts in
+NasaLib.
