@@ -44,16 +44,16 @@ configured with the library source.
 
 \paragraph{Updating a library} When necessary, it is possible to update
 the contents of a local copy of a library source. For the effect of
-updating the local copy of NASALib, a user can issue the following
-command:
+updating the local copy of NASALib from its publicly available source,
+an user can issue the following command:
 %
 \begin{verbatim}
 $ pvslm.py src -u nasalib
 \end{verbatim}
 %
-The effect of this command is to update the local copy of the entire
-library via $\git$'s pull command by using the URL associated to
-the library source.
+This command updates the local copy of the entire library via $\git$'s
+pull command by using the URL associated to the library source when it
+was created.
 
 \paragraph{Listing the packages in a library} By having a local
 copy of a library, it is possible to list all its packages. Also, it
@@ -98,7 +98,7 @@ Would you like to install the package(s) (y/N):
 By convention, $\pvslm$ performs {\em all} installations in the folder
 specified by the \cde{PVS\_PATH} global variable.
 
-\paragraph{Deleting a package} Finally, a user can issue the following
+\paragraph{Deleting a package} Finally, an user can issue the following
 command to delete package \cde{ints} from the (internal) local copy of
 NASALib:
 %
