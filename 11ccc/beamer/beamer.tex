@@ -1,0 +1,55 @@
+
+\hypersetup{pdfstartview={FitH}}
+\setbeamertemplate{frametitle}[default][center]
+\useinnertheme{rectangles}
+%\useoutertheme{infolines}
+
+\definecolor{niceblue}{RGB}{214,214,240}
+\definecolor{nicebluefg}{RGB}{51,51,179}
+
+% title page
+\setbeamercolor{title}{bg=niceblue}
+\setbeamerfont{title}{series=\bfseries}
+% frame title
+\setbeamercolor{frametitle}{bg=niceblue}
+\setbeamerfont{frametitle}{series=\bfseries}
+% block title
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamerfont{section in toc}{series=\bfseries}
+% footer
+\setbeamertemplate{navigation symbols}{}
+% alerted text
+\setbeamercolor{alerted text}{fg=nicebluefg}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+% custom itemization and enumeration environments
+\newenvironment{customitemize}[1][0]
+  { \begin{itemize}
+    % set spacing between items
+    \addtolength{\itemsep}{#1\baselineskip}
+    % set spacing between lines
+    %\addtolength{\baselineskip}{#1\baselineskip} 
+  }
+  { \end{itemize} }
+\newenvironment{customenumerate}[1][0]
+  { \begin{enumerate}
+    % set spacing between items
+    \addtolength{\itemsep}{#1\baselineskip}
+    % set spacing between lines
+    %\addtolength{\baselineskip}{#1\baselineskip} 
+  }
+  { \end{enumerate} }
+
+\newenvironment{outeritemize}
+  { \begin{customitemize}[0.5] }
+  { \end{customitemize} }
+\newenvironment{inneritemize}
+  { \begin{customitemize}[0.2] }
+  { \end{customitemize} }
+  
+\newenvironment{outerenumerate}
+  { \begin{customenumerate}[0.5] }
+  { \end{customenumerate} }
+\newenvironment{innerenumerate}
+  { \begin{customenumerate}[0.2] }
+  { \end{customenumerate} }
