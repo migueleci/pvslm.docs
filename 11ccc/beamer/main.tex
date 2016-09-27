@@ -15,7 +15,7 @@
 }
 
 \institute[ECI]{
-  \large \Mark{1}Escuela Colombiana de Ingenier\'ia Julio Garavito\\ \Mark{2}Pontificia Universidad Javeriana, Cali 
+  \large \Mark{1}Escuela Colombiana de Ingenier\'ia Julio Garavito, Bogotá\\ \Mark{2}Pontificia Universidad Javeriana, Cali 
 }
 
 \date[MPL 09.27.2016]{
@@ -40,42 +40,59 @@
   \frametitle{Context}
  
    \begin{outeritemize}
-   \item  The Prototype Verification System (PVS) is a verification system comprising a specification language integrated with support tools and a theorem prover
-   \item The PVS system has been used in state-of-the-art formal methods projects as a productive environment for constructing and maintaining collections of theories, both in industry and in research.
-   \item In \cde{pvslm}, the description language is designed to represent a PVS library as a collection of packages, with a package consisting of a collection of PVS theories. 
+   \item The Prototype Verification System (PVS) is a verification
+     system comprising a specification language integrated with
+     support tools and a theorem prover.
+     
+   \item The PVS system has been used in state-of-the-art formal
+     methods projects as a productive environment for constructing and
+     maintaining collections of theories, both in industry and in
+     research.
+     
+   \item Given the increasing size of mathematical developments in the
+     form of libraries and the growing need for and adoption of
+     mechanized proof environments such as PVS, it is important to
+     have tools for managing such libraries.
    \end{outeritemize}
 \end{frame}
 
 % pending Problem
 \begin{frame}
-  \frametitle{The Problem}
-  Given the increasing size of mathematical developments in the form of libraries and the growing need for and adoption of mechanized proof environments, such as PVS, it is important to have tools for managing such libraries.
+  \frametitle{The Problem} There does not exist an utility for the
+  management of PVS libraries.
 \end{frame}
 
 % pending Contribution
 \begin{frame}
   \frametitle{Main Contribution}
    \begin{outeritemize}
-   \item \cde{pvslm} is an utility for assisting in the management of PVS libraries, comprising:
+   \item \cde{pvslm} is an utility for assisting in the management of
+     PVS libraries, comprising:
    \begin{inneritemize}
-      \item[] a description language for annotating PVS libraries
-      \item[] an implementation for managing PVS libraries annotated with this language
-    \end{inneritemize}
-    \item The \cde{pvslm} implementation is written in the Python programming language and it can manage any (annotated) PVS library that is publicly available from a \cde{pvslm} server through the internet.
+      \item a description language for annotating PVS libraries
+      \item an implementation for managing PVS libraries annotated with this language
+   \end{inneritemize}
+ \item The description language is designed to represent a PVS library
+   as a collection of packages, with a package consisting of a
+   collection of PVS theories.
+
+ \item The implementation is written in the Python programming
+   language and it can manage any (annotated) PVS library that is
+   publicly available from a \cde{pvslm} server through the internet.
    \end{outeritemize}
 \end{frame}
 
-% Roadmap
+% Agenda
 \begin{frame}
-  \frametitle{Roadmap}
+  \frametitle{Agenda}
   \tableofcontents
 \end{frame}
 
 % Description Language
-\section{Description Language}
+\section{The Description Language}
 
 \begin{frame}
-  \frametitle{Roadmap} 
+  \frametitle{Agenda} 
   \tableofcontents[currentsection]
 \end{frame}
 
@@ -83,16 +100,22 @@
   \frametitle{Description Language}
 
 The \cde{pvslm} tool distinguishes three levels of aggregation for PVS
-sources. A PVS theory is the building block of a library managed by
-\cde{pvslm}. A {\em package} is a collection of theories.  A {\em
-  library} is at the top level of aggregation, comprising a collection
-of packages.
+sources:
+
+\begin{itemize}
+  \item A {\em theory} is the building block of a library.
+
+  \item A {\em package} is a collection of theories.
+
+  \item A {\em library} is at the top level of aggregation, comprising
+    a collection of packages.
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Description Language: BNF-like notation}
-  
+  \frametitle{Description Language: Syntax}
+  {\small
     \begin{table}
     \begin{tabular}{r c p{6cm}}
       \hline \\
@@ -107,9 +130,9 @@ of packages.
       \\
       \hline
     \end{tabular}
-    \caption{Syntax of the \cde{top.dep} metadata file in NASALib.}
+    \caption{Syntax of the description language in BNF-like notation.}
   \end{table}
-  
+  }
 \end{frame}
 
 \begin{frame}
@@ -126,15 +149,15 @@ of packages.
 \section{Obtaining the \cde{pvslm} Implementation}
 
 \begin{frame}
-  \frametitle{Roadmap} 
+  \frametitle{Agenda} 
   \tableofcontents[currentsection]
 \end{frame}
 
 \begin{frame}
-   \frametitle{How to obtain \cde{pvslm}}
+   \frametitle{Obtaining \cde{pvslm}}
 
-   The \cde{pvslm} tool can be installed automatically from the terminal in
-   unix systems by issuing the following command: 
+   The \cde{pvslm} tool can be installed automatically from the
+   terminal in Unix-like systems by issuing the following command:
    
    \bigskip
    
@@ -151,10 +174,10 @@ of packages.
 \end{frame}
 
 % Available Commands
-\section{Available Commands}
+\section{Overview of Available Commands}
 
 \begin{frame}
-  \frametitle{Roadmap} 
+  \frametitle{Agenda} 
   \tableofcontents[currentsection]
 \end{frame}
 
@@ -198,7 +221,7 @@ of packages.
 \section{Conclusion}
 
 \begin{frame}
-  \frametitle{Roadmap} 
+  \frametitle{Agenda} 
   \tableofcontents[currentsection]
 \end{frame}
 
@@ -206,13 +229,24 @@ of packages.
   \frametitle{Conclusion}
 
   \begin{outeritemize}
-  \item This tool features support for different library sources, libraries with several theories, and dependencies among the theories (within the same library source).
-  \item  The tool is freely available for download and it is distributed under GNU's GPLv3 license.
-  \item It uses a small footprint language for annotating libraries
-  \end{outeritemize}
+  \item The \cde{pvslm} tool features support for different library
+    sources, libraries with several theories, and dependencies among
+    the theories (within the same library source).
 
+  \item The tool is freely available for download and it is
+    distributed under GNU's GPLv3 license.
+
+  \item It uses a small footprint language for annotating libraries.
+  \end{outeritemize}
 \end{frame}
 
+\begin{frame}{Useful Links}
+  \begin{description}
+  \item[\cde{pvslm}] \url{http://migueleci.github.io/pvslm}
+  \item[]
+  \item[\cde{NASALib}] \url{https://github.com/nasa/pvslib}
+  \end{description}
+\end{frame}
 \begin{frame}
 
   \begin{center}
