@@ -1,27 +1,16 @@
 \documentclass[fleqn]{llncs}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{enumerate}
-\graphicspath{ {images/} }
 
 \input{packages}
 \input{macros}
 
-\title{
-  \pvslm: A Library Manager for the Prototype Verification
-  System
-}
+\title{Library Management for PVS}
 
-\author{
-  Miguel Romero\inst{1} \and
-  Camilo Rocha\inst{1} \and
-  César Muñoz\inst{2}
-}
+\author{Miguel Romero\inst{1} \and Camilo Rocha\inst{2}}
 
 \institute{
-  Escuela Colombiana de Ingenier\'{i}a, Bogot\'{a}, Colombia \\
-  NASA Langley Research Center, Hampton VA, USA
-}
+  Escuela Colombiana de Ingenier\'{i}a, Bogot\'{a}, Colombia \and
+  Pontificia Universidad Javeriana, Cali, Colombia
+  }
 
 \begin{document}
 
@@ -31,12 +20,17 @@
 
 \input{intro}
 
-\input{pvslm}
+\input{conf}
 
-\input{config}
+\input{install}
 
-\input{case}
+\input{cmd}
+
+\input{nasalib}
 
 \input{concl}
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
 
 \end{document}

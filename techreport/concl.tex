@@ -1,2 +1,23 @@
 \section{Concluding Remarks}
 \label{sec.concl}
+
+This paper presented the $\pvslm$ tool for managing libraries for the
+Prototype Verification System (PVS). This tool features support for
+different library sources, libraries with several theories, and
+dependencies among the theories (within the same library source).  The
+tool is freely available for download and it is distributed under
+GNU's GPLv3 license. It uses a small footprint language for annotating
+libraries, which is described in full detail in BNF-like notation in
+this paper. This paper also presents all commands available from the
+tool, its architecture, and an overview of its installation process.
+A detailed step-by-step case study is included for illustrating the
+main features of the tool.
+
+As usual, much work remains to be done. First, it is important to make
+available other PVS library sources with the help of the $\pvslm$
+tool.  Also, it is important to test the tool against different
+servers and in more operating systems. Finally, it would be highly
+desirable for the tool to manage different versions of a library
+source, each configured to work on the different versions of PVS
+installed in the host system. This will require an extension of the
+current $\pvslm$ description language for annotating library sources.

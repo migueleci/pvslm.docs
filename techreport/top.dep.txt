@@ -1,0 +1,15 @@
+{\small
+\begin{verbatim}
+/top,trig_doc,trig,trig_basic,trig_values,trig_ineq,trig_full,trig_extra,atan2
+structures/for_iterate
+reals/real_fun_preds,factorial,binomial,abs_lems,sign,sqrt_exists,root
+analysis_ax/continuous_functions_props,derivatives,sqrt_derivative
+finite_sets/finite_sets_minmax,finite_sets_inductions
+ints/factorial
+top:trig_doc,trig,trig_full,trig_basic,trig_values,trig_ineq,trig_extra
+trig_doc:
+trig:trig_basic,reals@sqrt,trig_values,trig_ineq
+trig_basic:reals@sqrt
+trig_values:trig_ineq
+trig_ineq:trig_basic
+\end{verbatim}}

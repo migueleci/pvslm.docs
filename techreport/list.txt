@@ -1,8 +1,0 @@
-The package complex depends on:
-algebra
-analysis_ax
-ints
-lnexp
-reals
-structures
-trig
